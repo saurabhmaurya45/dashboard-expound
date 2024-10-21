@@ -1,6 +1,15 @@
-import React from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
-import { HiSquares2X2, HiBookmark, HiBriefcase, HiBuildingOffice2, HiUsers, HiChartBar, HiDocument } from "react-icons/hi2";
+import React from "react";
+import { useNavigate, useLocation } from "react-router-dom";
+import {
+  HiSquares2X2,
+  HiBookmark,
+  HiBriefcase,
+  HiBuildingOffice2,
+  HiUsers,
+  HiChartBar,
+  HiDocument,
+} from "react-icons/hi2";
+import { RadixTooltip } from "./RadixTooltip";
 
 const sidebarItems = [
   { label: "Dashboard", icon: HiSquares2X2, url: "/dashboard/LE-010071" },
@@ -25,18 +34,24 @@ const Sidebar = () => {
       {sidebarItems.map((item) => {
         const isActive = location.pathname === item.url;
         return (
-          <button
-            key={item.label}
-            onClick={() => handleNavigation(item.url)}
-            className={`p-2 px-4 flex items-center justify-center rounded-sm cursor-pointer transition-colors duration-200 ${
-              isActive
-                ? "bg-blue-950 text-white"
-                : "text-black hover:bg-blue-950/20 hover:text-white"
-            }`}
-            aria-label={item.label}
-          >
-            <item.icon />
-          </button>
+          <RadixTooltip
+            tooltipTrigger={
+              <button
+                key={item.label}
+                onClick={() => handleNavigation(item.url)}
+                className={`p-2 flex items-center text-2xl justify-center rounded-md cursor-pointer transition-colors duration-200 ${
+                  isActive
+                    ? "bg-blue-950 text-white"
+                    : "text-black hover:bg-gray-400/90 hover:text-white/90"
+                }`}
+                aria-label={item.label}
+              >
+                <item.icon />
+              </button>
+            }
+            tooltipContent={item.label}
+            position="left"
+          />
         );
       })}
     </aside>

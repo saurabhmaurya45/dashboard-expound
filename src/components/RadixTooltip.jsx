@@ -54,7 +54,7 @@ export const RadixTooltip = ({
         <Tooltip.Portal>
           <Tooltip.Content
             className={cn(
-              `TooltipContent rounded-lg shadow-lg z-20 text-nowrap font-normal text-sm leading-5 p-2 px-4 bg-gray-100 `,
+              `TooltipContent rounded-lg shadow-lg z-[50] text-nowrap font-normal text-sm leading-5 p-2 px-4 bg-gray-200 `,
               getSize(size),
               tooltipContentClassName
             )}
@@ -77,4 +77,3 @@ export const RadixTooltip = ({
     </Tooltip.Provider>
   );
 };
-
