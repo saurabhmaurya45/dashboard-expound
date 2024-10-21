@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { RiArrowDropDownLine } from "react-icons/ri";
+import { RadixTooltip } from "./RadixTooltip";
 
 const AccountContactForm = () => {
   const [selectedAccount, setSelectedAccount] = useState("");
@@ -96,7 +97,7 @@ const AccountContactForm = () => {
         </div>
         <div className="flex w-[50%] flex-col p-2">
           <label className="font-semibold p-2">Contact</label>
-          <div className="relative">
+          <div className="relative flex items-center">
             <select
               className="w-full p-2 ml-1 rounded-sm appearance-none bg-gray-100/10 shadow-sm outline outline-[1.5px] outline-gray-200 text-gray-400"
               value={selectedContact}
@@ -111,17 +112,23 @@ const AccountContactForm = () => {
                 </option>
               ))}
             </select>
-            <div className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
-              <svg
-                className="h-5 w-5 text-gray-500"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                aria-hidden="true"
-              >
-                <path d="M10 5a1 1 0 0 1 1 1v3h3a1 1 0 1 1 0 2h-3v3a1 1 0 1 1-2 0v-3h-3a1 1 0 1 1 0-2h3v-3a1 1 0 0 1 1-1z" />
-              </svg>
-            </div>
+            <RadixTooltip
+              tooltipTrigger={
+                <button className="absolute inset-y-0 right-0 flex items-center text-gray-500 hover:text-gray-900 mr-1 mt-[2px] text-xl p-2 w-9 h-9 hover:bg-gray-100 rounded-full">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path d="M10 5a1 1 0 0 1 1 1v3h3a1 1 0 1 1 0 2h-3v3a1 1 0 1 1-2 0v-3h-3a1 1 0 1 1 0-2h3v-3a1 1 0 0 1 1-1z" />
+                  </svg>
+                </button>
+              }
+              tooltipContent="Add Contact No"
+              arrow={true}
+              position="right"
+            />
           </div>
         </div>
       </form>
