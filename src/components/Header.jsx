@@ -24,7 +24,7 @@ const iconsList = [
 ];
 function Header() {
   return (
-    <header className="flex w-full items-center justify-between p-2 px-6  bg-blue-950 text-white fixed top-0 z-50">
+    <header className="flex w-full items-center justify-between p-2 px-3 md:px-6  bg-blue-950 text-white fixed top-0 z-50">
       <div className="flex items-center gap-6 font-semibold text-2xl cursor-pointer">
         <span>
           <TbGridDots />
@@ -35,15 +35,18 @@ function Header() {
         <RadixTooltip
           tooltipTrigger={
             <Link to="#">
-              <div className="cursor-pointer w-8 h-8 flex items-center justify-center bg-white text-blue-950 p-1 rounded hover:text-blue-700">
+              <div className="cursor-pointer mr-4 md:mr-0  w-8 h-8 flex items-center justify-center bg-white text-blue-950 p-1 rounded hover:text-blue-700">
                 <FaSearch />
               </div>
             </Link>
           }
           hideOnClick={false}
           tooltipContent="Search"
+          arrow={true}
+          arrowClassName="!fill-gray-200"
+          tooltipContentClassName="bg-gray-200 text-black"
         />
-        <div className="flex items-center gap-3 text-white/60 ">
+        <div className="hidden md:flex items-center gap-3 text-white/60">
           <span className=" text-white flex items-center">
             <TbMinusVertical size={32} />
           </span>
@@ -58,6 +61,9 @@ function Header() {
               }
               tooltipContent={item.label}
               hideOnClick={false}
+              arrow={true}
+              arrowClassName="!fill-gray-200"
+              tooltipContentClassName="bg-gray-200 text-black"
             />
           ))}
           <span className=" text-white flex items-center">

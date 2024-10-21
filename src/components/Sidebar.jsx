@@ -30,31 +30,65 @@ const Sidebar = () => {
   };
 
   return (
-    <aside className="p-2 pt-4 w-16 h-[calc(100vh-48px)] border-r flex items-center flex-col gap-2 fixed left-0 top-[48px] bg-white">
-      {sidebarItems.map((item) => {
-        const isActive = location.pathname === item.url;
-        return (
-          <RadixTooltip
-            tooltipTrigger={
-              <button
-                key={item.label}
-                onClick={() => handleNavigation(item.url)}
-                className={`p-2 flex items-center text-2xl justify-center rounded-md cursor-pointer transition-colors duration-200 ${
-                  isActive
-                    ? "bg-blue-950 text-white"
-                    : "text-black hover:bg-gray-400/90 hover:text-white/90"
-                }`}
-                aria-label={item.label}
-              >
-                <item.icon />
-              </button>
-            }
-            tooltipContent={item.label}
-            position="left"
-          />
-        );
-      })}
-    </aside>
+    <>
+      <aside className="hidden md:flex p-2 pt-4 w-16 h-[calc(100vh-48px)] border-r items-center flex-col gap-2 fixed left-0 top-[48px] bg-white">
+        {sidebarItems.map((item) => {
+          const isActive = location.pathname === item.url;
+          return (
+            <RadixTooltip
+              tooltipTrigger={
+                <button
+                  key={item.label}
+                  onClick={() => handleNavigation(item.url)}
+                  className={`p-2 flex items-center text-2xl justify-center rounded-md cursor-pointer transition-colors duration-200 ${
+                    isActive
+                      ? "bg-blue-950 text-white"
+                      : "text-black hover:bg-gray-400/90 hover:text-white/90"
+                  }`}
+                  aria-label={item.label}
+                >
+                  <item.icon />
+                </button>
+              }
+              tooltipContent={item.label}
+              position="left"
+              arrow={true}
+            />
+          );
+        })}
+      </aside>
+      <aside className="md:hidden p-2 w-full fixed bottom-0 bg-gray-100 shadow-lg">
+        <div className="flex p-2 w-full overflow-x-scroll items-center bg-transparent flex-row gap-8 ">
+          {sidebarItems.map((item) => {
+            const isActive = location.pathname === item.url;
+            return (
+              <RadixTooltip
+                tooltipTrigger={
+                  <div className="flex flex-col">
+                    <button
+                      key={item.label}
+                      onClick={() => handleNavigation(item.url)}
+                      className={`p-2 flex items-center text-3xl justify-center rounded-md cursor-pointer transition-colors duration-200 ${
+                        isActive
+                          ? "bg-blue-950 text-white"
+                          : "text-black hover:bg-gray-400/90 hover:text-white/90"
+                      }`}
+                      aria-label={item.label}
+                    >
+                      <item.icon />
+                    </button>
+                    <p>{item.label}</p>
+                  </div>
+                }
+                tooltipContent={item.label}
+                position="top"
+                arrow={true}
+              />
+            );
+          })}
+        </div>
+      </aside>
+    </>
   );
 };
 

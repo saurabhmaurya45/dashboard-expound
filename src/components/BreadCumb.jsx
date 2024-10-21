@@ -6,10 +6,10 @@ const BreadCumb = () => {
   const pathnames = location.pathname.split('/').filter((x) => x);
 
   return (
-    <nav aria-label="breadcrumb" className='p-4 fixed top-[48px] left-16 w-full bg-white'>
+    <nav aria-label="breadcrumb" className='p-4 fixed top-[48px] md:left-16 w-full overflow-x-auto bg-white'>
       <ol className="breadcrumb flex items-center">
         <li className="breadcrumb-item">
-          <Link to="/" className="text-gray-500 hover:text-gray-700">Home</Link>
+          <Link to="/" className="text-gray-500 hover:text-gray-800">Home</Link>
         </li>
         {pathnames.map((name, index) => {
           const routeTo = `/${pathnames.slice(0, index + 1).join('/')}`;

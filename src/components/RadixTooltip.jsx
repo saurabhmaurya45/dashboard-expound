@@ -54,7 +54,7 @@ export const RadixTooltip = ({
         <Tooltip.Portal>
           <Tooltip.Content
             className={cn(
-              `TooltipContent rounded-lg shadow-lg z-[50] text-nowrap font-normal text-sm leading-5 p-2 px-4 bg-gray-200 `,
+              `TooltipContent rounded-lg shadow-lg z-[50] text-nowrap font-normal text-sm leading-5 p-2 px-4 bg-blue-950 text-white `,
               getSize(size),
               tooltipContentClassName
             )}
@@ -66,7 +66,7 @@ export const RadixTooltip = ({
             {tooltipContent}
             {arrow && (
               <Tooltip.Arrow
-                className={`${arrowClassName} ${
+                className={`fill-blue-950 ${arrowClassName} ${
                   arrowSize === "big" ? "w-4 h-4" : "w-4 h-2"
                 }`}
               />

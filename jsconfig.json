@@ -6,7 +6,7 @@
       "@assets*": ["src/assets*"],
       "@pages*": ["src/pages*"],
       "@utils*": ["src/utils*"],
-
+      "@hooks" : ["src/hooks"]
     }
   }
 }
