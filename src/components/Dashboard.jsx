@@ -71,7 +71,7 @@ function Dashboard() {
       <div className="w-full flex items-center flex-col lg:flex-row border-b border-gray-200 ">
         <UserSection />
         <div className="w-full lg:w-[50%] flex flex-col items-center border-gray-200 ">
-          <div className="w-full flex flex-col border-b border-gray-200 p-4"></div>
+          <div className="w-full flex flex-col border-b border-gray-200 p-2 md:p-4"></div>
           <UpcomingTasks />
         </div>
       </div>
