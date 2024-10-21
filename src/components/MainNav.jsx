@@ -30,9 +30,9 @@ const MainNav = () => {
             {button.map((item, index) => (
                 <button
                     key={index}
-                    className={`px-4 py-2 rounded-sm transition-colors duration-200 ${activeButton === item.label
+                    className={`px-4 py-2 rounded-sm transition-colors cursor-pointer duration-200 ${activeButton === item.label
                         ? "bg-orange-100 text-orange-600 hover:bg-orange-200"
-                        : "bg-gray-300 text-gray-500 hover:text-gray-900 hover:bg-gray-500"
+                        : "bg-gray-300 text-gray-500 hover:text-gray-900 hover:bg-gray-400/80"
                         }`}
                     onClick={() => setActiveButton(item.label)}
                 >

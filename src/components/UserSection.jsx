@@ -10,7 +10,7 @@ const UserSection = () => {
 
     return (
         <div className="w-full lg:w-[50%] gap-4 lg:border-r border-gray-200 pt-2">
-            <div className="flex h-36 items-center justify-between w-full border-b border-gray-200">
+            <div className="flex items-center justify-between w-full border-b border-gray-200">
                 <UserBasicDetails />
             </div>
             <div className="w-full flex items-center gap-4 border-b border-gray-200 pt-4 pb-0">

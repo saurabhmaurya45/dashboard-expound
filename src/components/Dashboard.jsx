@@ -37,7 +37,7 @@ function Dashboard() {
     <div className="flex-1 md:ml-16 mt-[104px]">
       <div className="flex justify-between">
         <div className="w-full flex items-center justify-between gap-2 border-b border-gray-200 p-4">
-          <h1 className="text-2xl font-semibold">{userId}</h1>
+          <h1 className="text-xl md:text-2xl font-semibold">{userId}</h1>
           <div className="flex items-center gap-1">
             {icon.map((item, index) => (
               <RadixTooltip
@@ -57,11 +57,11 @@ function Dashboard() {
           </div>
         </div>
       </div>
-      <div className="w-full flex items-center justify-between gap-4 border-b border-gray-200 p-3">
-        <div className="w-full flex items-center gap-4">
+      <div className="w-full flex items-center justify-between flex-col md:flex-row gap-4 border-b border-gray-200 p-3">
+        <div className="w-full flex items-center gap-4 overflow-x-auto">
           <MainNav />
         </div>
-        <button className="flex items-center gap-2 px-4 bg-blue-950 text-white text-nowrap p-2">
+        <button className="flex w-full md:w-auto items-center gap-2 px-4 bg-blue-900/95 hover:bg-blue-950 text-white text-nowrap p-2">
           <span>
             <TiTick />
           </span>
