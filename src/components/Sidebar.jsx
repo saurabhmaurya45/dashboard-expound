@@ -36,6 +36,7 @@ const Sidebar = () => {
           const isActive = location.pathname === item.url;
           return (
             <RadixTooltip
+              key={item.label}
               tooltipTrigger={
                 <button
                   key={item.label}
@@ -63,6 +64,7 @@ const Sidebar = () => {
             const isActive = location.pathname === item.url;
             return (
               <RadixTooltip
+                key={item.label}
                 tooltipTrigger={
                   <div className="flex flex-col">
                     <button

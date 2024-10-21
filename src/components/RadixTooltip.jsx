@@ -14,6 +14,11 @@ export const RadixTooltip = ({
   hideOnClick,
   arrowSize,
   arrowClassName,
+  style,
+  sideOffset,
+  align,
+  alignOffset,
+  arrowOffset
 }) => {
   const getPosition = (position) => {
     switch (position) {
@@ -58,9 +63,11 @@ export const RadixTooltip = ({
               getSize(size),
               tooltipContentClassName
             )}
+            style={style}
             side={getPosition(position)}
-            sideOffset={0}
-            alignOffset={10}
+            sideOffset={sideOffset ?? 0}
+            align={align ?? ""}
+            alignOffset={alignOffset ?? 0}
             onPointerDownOutside={hideOnClick ? () => {} : null} // Handle hide on click
           >
             {tooltipContent}
@@ -69,6 +76,7 @@ export const RadixTooltip = ({
                 className={`fill-blue-950 ${arrowClassName} ${
                   arrowSize === "big" ? "w-4 h-4" : "w-4 h-2"
                 }`}
+                offset={arrowOffset}
               />
             )}
           </Tooltip.Content>

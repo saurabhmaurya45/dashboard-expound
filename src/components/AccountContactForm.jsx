@@ -114,7 +114,10 @@ const AccountContactForm = () => {
             </select>
             <RadixTooltip
               tooltipTrigger={
-                <button className="absolute inset-y-0 right-0 flex items-center text-gray-500 hover:text-gray-900 mr-1 mt-[2px] text-xl p-2 w-9 h-9 hover:bg-gray-100 rounded-full">
+                <button
+                  className="absolute inset-y-0 right-0 flex items-center text-gray-500 hover:text-gray-900 mr-1 mt-[2px] text-xl p-2 w-9 h-9 hover:bg-gray-100 rounded-full"
+                  type="button"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
@@ -127,7 +130,7 @@ const AccountContactForm = () => {
               }
               tooltipContent="Add Contact No"
               arrow={true}
-              position="right"
+              sideOffset={15}
             />
           </div>
         </div>

@@ -52,6 +52,7 @@ function Header() {
           </span>
           {iconsList.map((item, index) => (
             <RadixTooltip
+              key={item.label}
               tooltipTrigger={
                 <Link to={item.url} key={index}>
                   <div className="w-9 h-9 text-2xl flex items-center justify-center text-white/60 hover:text-white hover:bg-white/20 rounded-md">
