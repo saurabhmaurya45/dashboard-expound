@@ -12,7 +12,7 @@ import {
 import { RadixTooltip } from "./RadixTooltip";
 
 const sidebarItems = [
-  { label: "Dashboard", icon: HiSquares2X2, url: "/dashboard/LE-010071" },
+  { label: "Dashboard", icon: HiSquares2X2, url: "/dashboard/LE-010071?actionTab=activity&section=other-contacts" },
   { label: "Bookmarks", icon: HiBookmark, url: "/bookmarks" },
   { label: "Projects", icon: HiBriefcase, url: "/projects" },
   { label: "Buildings", icon: HiBuildingOffice2, url: "/buildings" },

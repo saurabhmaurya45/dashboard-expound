@@ -10,7 +10,11 @@ const routes = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Navigate to="/dashboard/LE-010071" replace />,
+        element: <Navigate to="/dashboard/LE-010071?section=basic-details&actionTab=activity" replace />,
+      },
+      {
+        path: "dashboard",
+        element: <Navigate to="/dashboard/LE-010071?section=basic-details&actionTab=activity" replace />,
       },
       {
         path: "dashboard/:userId",
