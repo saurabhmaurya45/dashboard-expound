@@ -38,7 +38,7 @@ const UserNav = () => {
         {detailsTabs.map((item, index) => (
             <button
                 key={index}
-                className={`px-4 py-2 rounded-sm transition-colors duration-200 text-nowrap  ${activeDetailsTab === item.label
+                className={`px-4 py-2 rounded-sm font-medium transition-colors duration-200 text-nowrap  ${activeDetailsTab === item.label
                     ? " text-blue-900 hover:bg-blue-100 border-b-2 border-blue-900"
                     : " text-gray-500 hover:text-gray-900 hover:bg-gray-100"
                     }`}
