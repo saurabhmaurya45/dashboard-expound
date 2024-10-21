@@ -17,9 +17,12 @@ const Tabs = ({ tabList, handleNavigation, activeTab, badgeClass }) => {
           {item.label}
           {item.badge && (
             <div
-              className={cn("p-2 rounded-full absolute top-0 right-0", {
-                [badgeClass]: !!badgeClass,
-              })}
+              className={cn(
+                "w-5 h-5 flex items-center justify-center text-[10px] z-[1] rounded-full absolute -top-1 -right-1",
+                {
+                  [badgeClass]: !!badgeClass,
+                }
+              )}
             >
               {item.badge}
             </div>

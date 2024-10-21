@@ -35,11 +35,13 @@ const UserNav = () => {
 
   const handleNavigation = (item) => {
     setActiveDetailsTab(item.label);
-    navigate(`?section=${item.url.slice(1)}`);
+    const currentUrl = new URL(window.location.href);
+    currentUrl.searchParams.set("section", item.url.slice(1));
+    navigate(currentUrl.pathname + currentUrl.search);
   };
 
   return (
-    <div className="flex w-full px-2 overflow-x-auto no-scrollbar mr-4 lg:mr-0">
+    <div className="flex w-full px-2 overflow-x-auto no-scrollbar pt-4 mr-4 lg:mr-0">
       <Tabs
         tabList={detailsTabs}
         handleNavigation={handleNavigation}

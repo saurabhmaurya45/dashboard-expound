@@ -136,7 +136,7 @@ const AccountContactForm = () => {
         </div>
       </form>
 
-      <ul className="p-2 flex-1 h-96 overflow-y-scroll">
+      <ul className="p-2 flex-1 h-96 md:h-[30rem] overflow-y-scroll">
         {accountsData.map((account) => (
           <li key={account.id} className="p-2 flex justify-between">
             <div>

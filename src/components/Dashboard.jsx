@@ -4,8 +4,8 @@ import { HiPlusCircle, HiPlus, HiFilter, HiRefresh } from "react-icons/hi";
 import MainNav from "./MainNav";
 import { TiTick } from "react-icons/ti";
 import UserSection from "./UserSection";
-import UpcomingTasks from "./TaskCard";
 import { RadixTooltip } from "./RadixTooltip";
+import ActionSection from "./ActionSection";
 
 const icon = [
   {
@@ -68,14 +68,9 @@ function Dashboard() {
           Mark as Converted
         </button>
       </div>
-      <div className="w-full flex items-center flex-col lg:flex-row border-b border-gray-200 ">
+      <div className="w-full flex flex-col lg:flex-row border-b border-gray-200 ">
         <UserSection />
-        <div className="w-full lg:w-[50%] flex flex-col items-center border-gray-200 ">
-          <div className="w-full flex flex-col border-b border-gray-200 p-2 md:p-4">
-            
-          </div>
-          <UpcomingTasks />
-        </div>
+        <ActionSection />
       </div>
     </div>
   );
