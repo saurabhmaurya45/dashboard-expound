@@ -1,8 +1,5 @@
-# React + Vite
+<h1>Page Analysis Report</h1>
+<img width="1440" alt="Screenshot 2024-10-22 at 12 52 12 PM" src="https://github.com/user-attachments/assets/6490e2e6-6b7c-4cbf-bb6a-0482b973bf4e">
+<img width="1440" alt="Screenshot 2024-10-22 at 12 51 34 PM" src="https://github.com/user-attachments/assets/d689f9a8-a777-41b8-ab13-029dd816c286">
+<img width="1440" alt="Screenshot 2024-10-22 at 5 10 34 AM" src="https://github.com/user-attachments/assets/6d0dc3df-2476-4cf6-8ebc-72da817ccd27">
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
