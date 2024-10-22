@@ -33,7 +33,7 @@ const Sidebar = () => {
     <>
       <aside className="hidden md:flex p-2 pt-4 w-16 h-[calc(100vh-48px)] border-r items-center flex-col gap-4 fixed left-0 top-[48px] bg-white">
         {sidebarItems.map((item) => {
-          const isActive = location.pathname === item.url;
+          const isActive = location.pathname === item.url.split("?")[0];
           return (
             <RadixTooltip
               key={item.label}
