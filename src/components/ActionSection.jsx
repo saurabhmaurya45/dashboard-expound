@@ -6,6 +6,8 @@ import { FaPhone } from "react-icons/fa";
 import { BiBulb } from "react-icons/bi";
 import { TfiEmail } from "react-icons/tfi";
 import { useSearchParams } from "react-router-dom";
+import FadeInOutWrapper from "./FadeInOutWrapper";
+import EmptyState from "./EmptyState";
 
 const LineIcon = () => (
   <svg width="10" height="70" xmlns="http://www.w3.org/2000/svg" opacity={0.5}>
@@ -86,12 +88,10 @@ const ActionSection = () => {
           <div className="w-full flex items-center gap-4 border-b border-gray-200 pb-0">
             <ActionTabs />
           </div>
-          {actionTab === "activity" && (
-            <>
-              <ActivityAction />
-              <EmailForm />
-            </>
-          )}
+          <FadeInOutWrapper isOpen={actionTab === "activity"}>
+            <ActivityAction />
+            <EmailForm />
+          </FadeInOutWrapper>
         </div>
         <div className="md:w-[35%] border-t md:border-t-0">
           <div className="w-full flex items-center gap-4 border-b border-gray-200 p-4">
