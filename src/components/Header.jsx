@@ -3,7 +3,7 @@ import { FaSearch } from "react-icons/fa";
 import { CiCalendar, CiSettings } from "react-icons/ci";
 import { TbGridDots, TbMinusVertical } from "react-icons/tb";
 import { Link } from "react-router-dom";
-import { RadixTooltip } from "./RadixTooltip";
+import { RadixTooltip } from "./custom/RadixTooltip";
 
 const iconsList = [
   {

@@ -6,8 +6,8 @@ import { FaPhone } from "react-icons/fa";
 import { BiBulb } from "react-icons/bi";
 import { TfiEmail } from "react-icons/tfi";
 import { useSearchParams } from "react-router-dom";
-import FadeInOutWrapper from "./FadeInOutWrapper";
-import EmptyState from "./EmptyState";
+import FadeInOutWrapper from "./custom/FadeInOutWrapper";
+import EmptyState from "./custom/EmptyState";
 
 const LineIcon = () => (
   <svg width="10" height="70" xmlns="http://www.w3.org/2000/svg" opacity={0.5}>

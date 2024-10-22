@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import Tabs from "./Tabs";
+import Tabs from "./custom/Tabs";
 
 const actionTabs = [
   {
@@ -47,7 +47,7 @@ const ActionTabs = () => {
         tabList={actionTabs}
         handleNavigation={handleNavigation}
         activeTab={activeTab}
-        badgeClass = "bg-red-500 text-white"
+        badgeClass="bg-red-500 text-white"
       />
     </div>
   );

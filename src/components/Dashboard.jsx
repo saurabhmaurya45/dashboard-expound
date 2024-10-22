@@ -4,7 +4,7 @@ import { HiPlusCircle, HiPlus, HiFilter, HiRefresh } from "react-icons/hi";
 import MainNav from "./MainNav";
 import { TiTick } from "react-icons/ti";
 import UserSection from "./UserSection";
-import { RadixTooltip } from "./RadixTooltip";
+import { RadixTooltip } from "./custom/RadixTooltip";
 import ActionSection from "./ActionSection";
 
 const icon = [

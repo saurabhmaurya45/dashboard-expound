@@ -9,10 +9,14 @@ import {
   HiChartBar,
   HiDocument,
 } from "react-icons/hi2";
-import { RadixTooltip } from "./RadixTooltip";
+import { RadixTooltip } from "./custom/RadixTooltip";
 
 const sidebarItems = [
-  { label: "Dashboard", icon: HiSquares2X2, url: "/dashboard/LE-010071?actionTab=activity&section=other-contacts" },
+  {
+    label: "Dashboard",
+    icon: HiSquares2X2,
+    url: "/dashboard/LE-010071?actionTab=activity&section=other-contacts",
+  },
   { label: "Bookmarks", icon: HiBookmark, url: "/bookmarks" },
   { label: "Projects", icon: HiBriefcase, url: "/projects" },
   { label: "Buildings", icon: HiBuildingOffice2, url: "/buildings" },

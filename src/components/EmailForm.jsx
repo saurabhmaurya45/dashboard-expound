@@ -1,7 +1,9 @@
-import Input from "./Input";
+import Input from "./custom/Input";
 import React from "react";
 import { RiAddLine } from "react-icons/ri";
 
+const inputClassName =
+  "w-full p-2 ml-1 appearance-none rounded-sm bg-gray-100/10 shadow-sm outline outline-[1.5px] outline-gray-200 text-gray-400";
 const EmailForm = () => {
   return (
     <form className="p-2">
@@ -12,7 +14,7 @@ const EmailForm = () => {
           type="text"
           className="flex flex-col gap-2 p-1 w-[45%]"
           labelClassName="font-medium p-1"
-          inputClassName="w-full p-2 ml-1 appearance-none rounded-sm bg-gray-100/10 shadow-sm outline outline-[1.5px] outline-gray-200 text-gray-400"
+          inputClassName={inputClassName}
           placeholder="Input Text"
           isTextArea={false}
         />
@@ -22,7 +24,7 @@ const EmailForm = () => {
           type="text"
           className="flex flex-col gap-2 p-1 w-[45%]"
           labelClassName="font-medium p-1"
-          inputClassName="w-full p-2 ml-1 appearance-none rounded-sm bg-gray-100/10 shadow-sm outline outline-[1.5px] outline-gray-200 text-gray-400"
+          inputClassName={inputClassName}
           placeholder="Input Text"
           isTextArea={false}
         />
@@ -34,7 +36,7 @@ const EmailForm = () => {
           type="date"
           className="flex flex-col gap-2 p-1 w-[45%]"
           labelClassName="font-medium p-1"
-          inputClassName="w-full p-2 ml-1 appearance-none rounded-sm bg-gray-100/10 shadow-sm outline outline-[1.5px] outline-gray-200 text-gray-400"
+          inputClassName={inputClassName}
           isTextArea={false}
         />
         <Input
@@ -43,7 +45,7 @@ const EmailForm = () => {
           type="time"
           className="flex flex-col gap-2 p-1 w-[45%]"
           labelClassName="font-medium p-1"
-          inputClassName="w-full p-2 ml-1 appearance-none rounded-sm bg-gray-100/10 shadow-sm outline outline-[1.5px] outline-gray-200 text-gray-400"
+          inputClassName={inputClassName}
           isTextArea={false}
         />
       </div>
@@ -54,7 +56,7 @@ const EmailForm = () => {
           className="flex flex-col gap-2 p-1 w-full"
           labelClassName="font-medium p-1"
           placeholder="Input Text"
-          textareaClassName="w-full p-2 ml-1 appearance-none rounded-sm bg-gray-100/10 shadow-sm outline outline-[1.5px] outline-gray-200 text-gray-400"
+          textareaClassName={inputClassName}
           isTextArea={true}
         />
       </div>

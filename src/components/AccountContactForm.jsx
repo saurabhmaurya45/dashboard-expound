@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { RiArrowDropDownLine } from "react-icons/ri";
-import { RadixTooltip } from "./RadixTooltip";
+import { RadixTooltip } from "./custom/RadixTooltip";
 
 const AccountContactForm = () => {
   const [selectedAccount, setSelectedAccount] = useState("");

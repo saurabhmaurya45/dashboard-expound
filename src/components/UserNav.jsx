@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import Tabs from "./Tabs";
+import Tabs from "./custom/Tabs";
 
 const detailsTabs = [
   {

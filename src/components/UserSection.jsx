@@ -3,7 +3,7 @@ import UserBasicDetails from "./UserBasicDetails";
 import UserNav from "./UserNav";
 import AccountContactForm from "./AccountContactForm";
 import { useSearchParams } from "react-router-dom";
-import FadeInOutWrapper from "./FadeInOutWrapper";
+import FadeInOutWrapper from "./custom/FadeInOutWrapper";
 
 const UserSection = () => {
   const [searchParams] = useSearchParams();
